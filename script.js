@@ -30,7 +30,7 @@ function onCellClicked(clickedCellEvent) {
         [2, 4, 6]
     ];
     let roundWon = false;
-    for (let i = 0; i <= winningStates.length; i++) {
+    for (let i = 0; i < winningStates.length; i++) {
         /* Get the current win states game state values */
         const winState = winningStates[i];
         let gameState1stVal = gameState[winState[0]];
