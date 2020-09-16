@@ -41,7 +41,7 @@ function onCellClicked(clickedCellEvent) {
             continue;
         }
         /* Check if the same player set those values */
-        if (a === b && b === c)
+        if (gameState1stVal === gameState2ndVal && gameState2ndVal === gameState3rdVal)
         {
             roundWon = true;
             break;
