@@ -2,17 +2,15 @@ const statusDisplay = document.querySelector('.game-status');
 let gameActive = true;
 let currentPlayer = "X";
 let gameState = ["", "", "", "", "", "", "", "", ""];
-const winningMessage = () => `Player ${currentPlayer} has won!`
-const drawMessage = () => `Game ended in a draw!`
-const currentPlayerTurn = () => `It's ${currentPlayer}'s turn.`
+const winningMessage = () => `Player ${currentPlayer} has won!`;
+const drawMessage = () => `Game ended in a draw!`;
+const currentPlayerTurn = () => `It's ${currentPlayer}'s turn.`;
 
 function onCellClicked(clickedCellEvent) {
     /* Get the HTML element */
     const clickedCell = clickedCellEvent.target;
     /* Get the cell's index */
-    const clickedCellIndex = parseInt(
-        clickedCell.getAttribute('data-cell-index')
-    );
+    const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
     /* Check to see if the cell has already been clicked or if the game is over */
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
         return;
@@ -63,7 +61,7 @@ function onCellClicked(clickedCellEvent) {
         return;
     }
     /* Change the current player */
-    currentPlayer = currentPlayer === "X" ? "O" : "X"
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.innerHTML = currentPlayerTurn();
 }
 
